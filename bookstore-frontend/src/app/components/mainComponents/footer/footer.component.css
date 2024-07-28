@@ -1,0 +1,28 @@
+.literature:hover,
+.stationary:hover,
+.school:hover,
+.toy:hover,
+.exam:hover,
+.about:hover,
+.personal-information:hover,
+.delivery:hover,
+.sell:hover,
+.warranty:hover,
+.connection:hover,
+.new-books:hover,
+.bestseller:hover,
+.member-title:hover,
+.faq:hover,
+.entry:hover,
+.new-member:hover {
+  font-size: 15px;
+  color: red;
+  font-weight: 400;
+}
+.member-title:hover,
+.categories-title:hover,
+.information-title:hover,
+.quick-access-title:hover {
+  color: red;
+  font-weight: 500;
+}
