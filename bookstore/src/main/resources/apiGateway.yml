@@ -1,0 +1,29 @@
+## YAML Template.
+---
+spring:
+  application:
+    name: apiGateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: register-service
+          uri: lb://register-service
+          predicates:
+            - Path=/register/**
+        - id: login-service
+          uri: lb://login-service
+          predicates:
+            - Path=/login/**
+      discovery:
+        locator:
+          enabled: true
+server:
+  port: 8888
+
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:9999/eureka}
+  instance:
+    prefer-ip-address: true
