@@ -1,0 +1,21 @@
+.right {
+  background: rgb(235, 235, 235);
+  background: linear-gradient(
+    90deg,
+    rgba(235, 235, 235, 1) 0%,
+    rgba(248, 2, 2, 1) 51%
+  );
+}
+.main-div {
+  height: 10px;
+}
+.space {
+  width: 30vw;
+}
+.input-text-css {
+  border-radius: 10px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.397);
+}
+.label-css {
+  font-weight: 500;
+}

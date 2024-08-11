@@ -64,8 +64,19 @@ export class HomepageComponent implements OnInit, AfterViewInit {
   }
 
   updateCarousel = (currentIndexRef: { currentIndex: number }, carouselType: number) => {
-    const itemsPerPage = 4;
-    const itemWidthPercentage = 100 / itemsPerPage;
+    var itemsPerPage: number;
+    var itemWidthPercentage: number;
+    if ((window.innerWidth >= 768 && window.innerWidth <= 1024) || (window.innerWidth > 1024 && window.innerWidth < 1280)) {
+      itemsPerPage = 2;
+      itemWidthPercentage = 100 / itemsPerPage;
+    } else if (window.innerWidth <= 640 || (window.innerWidth < 768 && window.innerWidth >= 640)) {
+      itemsPerPage = 1;
+      itemWidthPercentage = 100 / itemsPerPage;
+    } else {
+      itemsPerPage = 4;
+      itemWidthPercentage = 100 / itemsPerPage;
+    }
+
     if (carouselType == 1) {
       this.carouselWrapper.style.transform = `translateX(-${currentIndexRef.currentIndex * itemWidthPercentage
         }%)`;

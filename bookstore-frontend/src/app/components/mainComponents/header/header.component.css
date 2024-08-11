@@ -1,14 +1,11 @@
-.dropbtn {
+/* .dropbtn {
   padding: 16px;
-  font-size: 16px;
   border: none;
   border-radius: 10px;
   position: relative;
-  /* right: 5px; */
 }
 
 .dropdown {
-  /* position: relative; */
   display: inline-block;
   border-radius: 10px;
 }
@@ -37,4 +34,13 @@
 
 .menu:hover .dropdown-content {
   display: block;
+} */
+@media only screen and (min-width: 640px) {
+  .dropdown-content a {
+    width: 80vw;
+  }
+  .dropdown-content {
+    position: absolute;
+    left: -110px;
+  }
 }

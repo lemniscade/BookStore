@@ -1,112 +1,167 @@
 <div class="screen flex flex-row bg-[#F8F8F8] justify-center w-[100vw]">
-  <div class="outer w-[100vw] flex flex-column justify-center">
+  <div class="outer w-[100vw] flex flex-col justify-center">
     <div class="outer-of-inner-1 flex justify-center items-center">
       <div
-        class="inner-1 flex flex-row justify-between items-center w-[80vw] p-4"
+        class="inner-1 sm:w-[90vw] sm:flex sm:flex-row sm:justify-between sm:items-center md:w-[90vw] md:flex md:flex-row md:items-center md:justify-between p-4"
       >
-        <div class="logo">
+        <!-- <div class="p-4 sm:ml-64"></div> -->
+
+        <div class="logo sm:w-[10vw] md:h-[10vh]">
           <img
             src="../../../../assets/images/book.jpeg"
             alt=""
             class="w-[58px] h-auto inline-block"
           />
         </div>
+
         <div
-          class="menu border-solid rounded-[10px] border-2 shadow hover:border-black hover:border-4 flex flex-row justify-around items-center w-[200px]"
+          class="menu sm:w-[10vw] md:w-[10vw] lg:w-[10vw] h-[56px] lg:justify-around border-solid rounded-[10px] border-[3px] border-black-300 shadow hover:border-black hover:border-4 flex flex-row justify-between items-center"
         >
-          <div class="dropdown">
-            <div class="dropdown-container">
-              <button
-                class="dropbtn text-[#E30613] font-bold text-sm border-r-[3px] border-[#A2A2A2]"
-              >
-                Menu
-              </button>
-              <div class="dropdown-content z-10">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div>
+          <button
+            id="dropdownDefaultButton"
+            data-dropdown-toggle="dropdown"
+            class="sm:w-[10vw] flex justify-between text-[#E30613] md:w-[10vw] font-medium rounded-lg text-sm items-center"
+            type="button"
+          >
+            <div
+              class="menu-text font-bold sm:w-[10vw] md:w-[10vw] lg:w-[5vw] text-center"
+            >
+              Menu
             </div>
+            <div class="menu-icon sm:hidden md:hidden lg:inline">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                class="fill-[#E30613] lg:w-[3vw] xl:w-[30px] pr-2"
+              >
+                <path
+                  d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                />
+              </svg>
+            </div>
+          </button>
+
+          <!-- Dropdown menu -->
+          <div
+            id="dropdown"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+          >
+            <ul
+              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+              aria-labelledby="dropdownDefaultButton"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block text-center py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Dashboard</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block text-center py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Settings</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block text-center py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Earnings</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block text-center py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Sign out</a
+                >
+              </li>
+            </ul>
           </div>
-          <svg
+
+          <!-- <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
-            class="fill-[#E30613] w-[28px] pr-2"
+            class="fill-[#E30613] sm:w-[20px] lg:w-[28px] md:w-[20px] pr-2"
           >
-            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
             <path
               d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
             />
-          </svg>
+          </svg> -->
         </div>
-        <div class="search relative">
+        <div class="search sm:w-[15vw] md:w-[12vw]">
           <input
             type="text"
-            class="border pl-10 pr-4 py-2 focus:outline-none focus:border-red-500 w-[30vw] rounded-[10px]"
+            class="sm:w-[15vw] leading-[20px] md:w-[12vw] border focus:outline-none focus:border-red-500 w-[30vw] rounded-[10px]"
             placeholder="Search"
           />
-          <div
-            class="absolute inset-y-0 right-3 pl-3 flex items-center pointer-events-none"
+          <!-- <div   yeniden ekle
+            class="leading-[20px] flex justify-items-end items-center pointer-events-none"
           >
             <i class="fa fa-search text-gray-400"></i>
-          </div>
+          </div> -->
         </div>
         <div
-          class="register w-[110px] h-[56px] flex justify-around items-center border-solid border-2 shadow rounded-[10px] hover:border-black text-[#E30613] font-bold text-sm pr-[3px] border-r-[3px] border-[#A2A2A2] hover:border-4"
+          class="register sm:w-[10vw] md:w-[10vw] lg:w-[10vw] lg:text-sm h-[56px] flex justify-around items-center border-solid border-2 shadow rounded-[10px] hover:border-black text-[#E30613] font-bold border-r-[3px] border-[#A2A2A2] hover:border-4"
         >
           <div
-            class="register-text border-solid border-black-300 text-center font-bold"
+            class="register-text sm:w-[10vw] sm:text-sm lg:w-[5vw] border-solid border-black-300 text-center font-bold"
           >
             Register
           </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-            class="fill-[#E30613] w-[23px]"
-          >
-            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-            <path
-              d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"
-            />
-          </svg>
+          <div class="register-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              class="fill-[#E30613] md:hidden lg:w-[2vw] lg:inline xl:w-[25px]"
+            >
+              <path
+                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"
+              />
+            </svg>
+          </div>
         </div>
         <div
-          class="login w-[106px] h-[56px] flex justify-around items-center border-solid border-2 shadow rounded-[10px] hover:border-black text-[#E30613] font-bold text-sm pr-[3px] border-r-[3px] border-[#A2A2A2] hover:border-4"
+          class="login sm:w-[10vw] md:w-[10vw] lg:w-[10vw] lg:text-sm h-[56px] flex justify-around items-center border-solid border-2 shadow rounded-[10px] hover:border-black text-[#E30613] font-bold text-sm pr-[3px] border-r-[3px] border-[#A2A2A2] hover:border-4"
         >
           <div
-            class="login-text border-solid border-black-300 text-center font-bold"
+            class="login-text sm:w-[10vw] md:w-[10vw] lg:w-[5vw] border-solid border-black-300 text-center font-bold"
           >
             Login
           </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
-            class="fill-[#E30613] w-[25px]"
-          >
-            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-            <path
-              d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"
-            />
-          </svg>
+          <div class="login-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="fill-[#E30613] sm:hidden md:hidden lg:w-[2vw] lg:inline xl:w-[25px]"
+            >
+              <path
+                d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"
+              />
+            </svg>
+          </div>
         </div>
         <div
-          class="cart w-[106px] h-[56px] flex flex-row justify-around items-center border-solid border-2 shadow rounded-[10px] hover:border-black text-[#E30613] font-bold text-sm pr-[3px] border-r-[3px] border-[#A2A2A2] hover:border-4"
+          class="cart sm:w-[10vw] md:w-[10vw] lg:w-[10vw] lg:text-sm h-[56px] flex flex-row justify-around items-center border-solid border-2 shadow rounded-[10px] hover:border-black text-[#E30613] font-bold text-sm pr-[3px] border-r-[3px] border-[#A2A2A2] hover:border-4"
         >
           <div
-            class="cart-text border-solid border-black-300 text-center font-bold"
+            class="cart-text sm:w-[10vw] md:w-[10vw] lg:w-[5vw] border-solid border-black-300 text-center font-bold"
           >
             Cart
           </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 576 512"
-            class="fill-[#E30613] w-[25px]"
-          >
-            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-            <path
-              d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
-            />
-          </svg>
+          <div class="cart-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+              class="fill-[#E30613] sm:hidden md:hidden lg:w-[2vw] lg:inline xl:w-[25px]"
+            >
+              <path
+                d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -114,45 +169,45 @@
       class="outer-of-inner-2 flex justify-center items-center w-[100vw] bg-[#EBEBEB] pb-[7px]"
     >
       <div
-        class="inner-2 flex flex-row justify-between items-center w-[80vw] pt-[10px] text-[#A2A2A2]"
+        class="inner-2 flex flex-row justify-between items-center w-[90vw] pt-[10px] text-[#A2A2A2]"
       >
         <div
-          class="literature-books w-[10vw] text-center hover:text-orange-700 font-bold text-sm pr-[3px] border-r-[3px] border-[#A2A2A2]"
+          class="literature-books sm:text-[8px] md:w-[100px] md:text-[10px] lg:w-[200px] lg:text-sm text-center hover:text-orange-700 font-bold pr-[3px] border-[#A2A2A2]"
         >
           LITERATURE BOOKS
         </div>
         <div
-          class="stationary w-[10vw] text-center hover:text-orange-700 font-bold text-sm pr-[3px] border-r-[3px] border-[#A2A2A2]"
+          class="stationary sm:text-[8px] md:w-[100px] md:text-[10px] lg:w-[200px] lg:text-sm text-center hover:text-orange-700 font-bold pr-[3px] border-[#A2A2A2]"
         >
           STATIONARY
         </div>
         <div
-          class="school-books w-[10vw] text-center hover:text-orange-700 font-bold text-sm pr-[3px] border-r-[3px] border-[#A2A2A2]"
+          class="school-books sm:text-[8px] md:w-[100px] md:text-[10px] lg:w-[200px] lg:text-sm text-center hover:text-orange-700 font-bold pr-[3px] border-[#A2A2A2]"
         >
           SCHOOL BOOKS
         </div>
         <div
-          class="toy w-[5vw] text-center hover:text-orange-700 font-bold text-sm border-r-[3px] border-[#A2A2A2]"
+          class="toy sm:text-[8px] md:w-[100px] md:text-[10px] lg:w-[200px] lg:text-sm text-center hover:text-orange-700 font-bold border-[#A2A2A2]"
         >
           TOYS
         </div>
         <div
-          class="exam-books w-[10vw] text-center hover:text-orange-700 font-bold text-sm pr-[3px] border-r-[3px] border-[#A2A2A2]"
+          class="exam-books sm:text-[8px] md:w-[100px] md:text-[10px] lg:w-[200px] lg:text-sm text-center hover:text-orange-700 font-bold pr-[3px] border-[#A2A2A2]"
         >
           EXAM BOOKS
         </div>
         <div
-          class="suggested-books w-[10vw] text-center hover:text-orange-700 font-bold text-sm pr-[3px] border-r-[3px] border-[#A2A2A2]"
+          class="suggested-books sm:text-[8px] md:w-[100px] md:text-[10px] lg:w-[200px] lg:text-sm text-center hover:text-orange-700 font-bold pr-[3px] border-[#A2A2A2]"
         >
           SUGGESTED BOOKS
         </div>
         <div
-          class="all-campaign w-[10vw] text-center hover:text-orange-700 font-bold text-sm pr-[3px] border-r-[3px] border-[#A2A2A2]"
+          class="all-campaign sm:text-[8px] md:w-[100px] md:text-[10px] lg:w-[200px] lg:text-sm text-center hover:text-orange-700 font-bold pr-[3px] border-[#A2A2A2]"
         >
           ALL CAMPAIGN
         </div>
         <div
-          class="best-seller w-[10vw] text-center hover:text-orange-700 font-bold text-sm pr-[3px]"
+          class="best-seller sm:text-[8px] md:w-[100px] md:text-[10px] lg:w-[200px] lg:text-sm text-center hover:text-orange-700 font-bold pr-[3px]"
         >
           BESTSELLER
         </div>
