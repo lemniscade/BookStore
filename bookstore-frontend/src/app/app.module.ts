@@ -9,6 +9,9 @@ import { LoginComponent } from './components/userComponents/login/login.componen
 import { RegisterComponent } from './components/userComponents/register/register.component';
 import { ProfileComponent } from './components/userComponents/profile/profile.component';
 import { HomepageComponent } from './components/mainComponents/homepage/homepage.component';
+import { VariableService } from './services/variable.service';
+import { RegisterService } from './services/register.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,9 +25,11 @@ import { HomepageComponent } from './components/mainComponents/homepage/homepage
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [VariableService, RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

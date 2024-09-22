@@ -4,15 +4,15 @@ import { HomepageComponent } from './components/mainComponents/homepage/homepage
 import { LoginComponent } from './components/userComponents/login/login.component';
 import { RegisterComponent } from './components/userComponents/register/register.component';
 import { ProfileComponent } from './components/userComponents/profile/profile.component';
+import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
   { path: "", component: HomepageComponent },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
   { path: "profile", component: ProfileComponent },
 ];
-
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), HttpClientModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
